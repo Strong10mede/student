@@ -1,0 +1,59 @@
+#include<iostream>
+using namespace std;
+
+class Student{
+	char name[20],department_name[20];
+	int roll_no;
+	public:
+		void takeinput();
+		void showdetails();
+};
+void Student :: takeinput(){ 
+            fflush(stdin);
+			cout<<"Enter your name : "<<endl;
+			gets(name);
+			cout<<"Enter your roll no. :"<<endl;
+			cin>>roll_no;
+			fflush(stdin);
+			cout<<"Enter your department name : "<<endl;
+			gets(department_name);
+		}
+void Student :: showdetails(){
+			cout<<"Name : "<<name<<endl;
+			cout<<"Roll NO. : "<<roll_no<<endl;
+			cout<<"Department Name : "<<department_name<<endl<<endl;
+		}
+int main(){
+	Student s[5];
+	int count=0;
+	while(1){
+		cout<<"Enter 1 to enter details"<<endl;
+		cout<<"Enter 2 to see all the details"<<endl;
+		cout<<"Enter 0 to exit."<<endl;
+		int i=0;
+		cin>>i;
+		switch(i){
+			case 1: 
+				s[count].takeinput();
+				count++;
+				break;
+			case 2:
+				if(count==0){
+					cout<<"First enter data"<<endl;
+					break;
+				}
+				for(int j=0;j<count;j++){
+				        s[j].showdetails();
+				}
+			break;
+			case 0:
+			    return 0;
+			default:
+			cout<<"Please choose a valid option"<<endl;    
+			break;
+				
+		}
+		
+	}
+	return 0;
+}
