@@ -3,17 +3,19 @@
 using namespace std;    
 
 int main(){
-		int n;
+		int n,i=0;
 		cin>>n;
 		int count=n;
 		int arr[n]={0};
-	    for(int i=0;i<n-1;i++){
+	    
+	    while(i<n-1){
 	    	int u,v;
 	    	cin>>u>>v;
 	    	if(arr[u-1]==0){
 	    		arr[u-1]=1;
 	    		count--;
 			}
+			
 		}
 		for(int i=0;i<n;i++){
 			double temp=0.0000000000d;
@@ -24,6 +26,7 @@ int main(){
 				temp = 1.0000000000d/count;
 				cout<<setprecision(10)<<temp<<" ";
 			}
+			
 		}
 	cout<<endl;
 	
