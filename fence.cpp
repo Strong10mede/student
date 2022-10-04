@@ -11,7 +11,7 @@ int main(){
 		cin>>a>>b>>c;
 		
 		int check=0;
-		if(a==b) d=c;
+		if(a!=b) d=c; // big mistake... Merge this otherwise code will give logical error
 		else d=b;
 		cout<<d<<endl;
 	}
